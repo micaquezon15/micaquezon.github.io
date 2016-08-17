@@ -1,0 +1,222 @@
+*{
+	top: 0;
+	margin: 0;
+	padding: 0;
+}
+
+.header{
+	position: fixed;
+	background-color: black;
+	height: 3em;
+	width: 100%;
+}
+
+.name{
+	position: absolute;
+	color: white;
+	font-size: 2em;
+	word-spacing: .4em;
+	letter-spacing: .4em;
+	margin-left: 3.5em;
+	padding-top: .2em;
+}
+.nav-bar{
+	position: absolute;
+	color: white;
+	font-size: 2em;
+	word-spacing: .6em;
+	letter-spacing: .4em;
+	margin-left: 27.5em;
+	padding-top: .2em;
+}
+.messages{
+	width: 10%;
+	height: 10%;
+}
+.greeting-box{
+
+	margin-left: 20%;
+	margin-top: 15%;
+	box-sizing: border-box;
+	width: 60%;
+	height: 50%;
+	text-align: center;
+}
+.font-default{
+	font-size: 2em;
+	font-family: 'Lobster', cursive;
+	line-height: 2em;
+}
+.highlights-default{
+	color: red;
+	-webkit-animation-name: animation-textcolor;
+    animation-name: animation-textcolor;
+    animation-duration: 8s;
+    animation-iteration-count: infinite;
+}
+.img-hellokitty{
+	position: absolute;
+	margin-top: 15%;
+	z-index: -1;
+}
+#message-box{
+	margin-top: 60%;
+	box-sizing: border-box;
+	width: 100%;
+	height: 100%;
+	font-weight: 400;
+}
+a{
+	color: white;
+	text-decoration: none;
+}
+
+@keyframes animation-textcolor{
+	25%   {color: red}
+    50%  {color:  red}
+    75%{color:  white}
+    100%{color:  white}
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    background-color: #ff99c2;
+    position: relative;
+    -webkit-animation-name: animation-back;
+    animation-name: animation-back;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes animation-back{
+	25%   {background-color: #ff99c2;}
+    50%  {background-color: #ff0066;}
+    75%{background-color: #ff0066;}
+    100%{background-color: #ff99c2;}
+}
+  @-webkit-keyframes spincube {
+    from,to  { -webkit-transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg); }
+    16%      { -webkit-transform: rotateY(-90deg);                           }
+    33%      { -webkit-transform: rotateY(-90deg) rotateZ(90deg);            }
+    50%      { -webkit-transform: rotateY(-180deg) rotateZ(90deg);           }
+    66%      { -webkit-transform: rotateY(-270deg) rotateX(90deg);           }
+    83%      { -webkit-transform: rotateX(90deg);                            }
+  }
+
+  @keyframes spincube {
+    from,to {
+      -moz-transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+      -ms-transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+      transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+    }
+    16% {
+      -moz-transform: rotateY(-90deg);
+      -ms-transform: rotateY(-90deg);
+      transform: rotateY(-90deg);
+    }
+    33% {
+      -moz-transform: rotateY(-90deg) rotateZ(90deg);
+      -ms-transform: rotateY(-90deg) rotateZ(90deg);
+      transform: rotateY(-90deg) rotateZ(90deg);
+    }
+    50% {
+      -moz-transform: rotateY(-180deg) rotateZ(90deg);
+      -ms-transform: rotateY(-180deg) rotateZ(90deg);
+      transform: rotateY(-180deg) rotateZ(90deg);
+    }
+    66% {
+      -moz-transform: rotateY(-270deg) rotateX(90deg);
+      -ms-transform: rotateY(-270deg) rotateX(90deg);
+      transform: rotateY(-270deg) rotateX(90deg);
+    }
+    83% {
+      -moz-transform: rotateX(90deg);
+      -ms-transform: rotateX(90deg);
+      transform: rotateX(90deg);
+    }
+  }
+
+  .cubespinner {
+    -webkit-animation-name: spincube;
+    -webkit-animation-timing-function: ease-in-out;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-duration: 12s;
+
+    animation-name: spincube;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-duration: 13s;
+
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    -ms-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    transform-origin: 60px 60px 0;
+    margin-left: 72em;
+    margin-top: 30em;
+    position: fixed;
+  }
+
+  .cubespinner div {
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    border: 1px solid #ccc;
+    background: rgba(255,255,255,0.8);
+    box-shadow: inset 0 0 20px black;
+  }
+
+  .cubespinner:hover {
+    -webkit-animation-play-state: paused;
+    animation-play-state: paused;
+  }
+
+  .cubespinner .face1 {
+  	background-image: url('mica1.jpg');
+    -webkit-transform: translateZ(60px);
+    -moz-transform: translateZ(60px);
+    -ms-transform: translateZ(60px);
+    transform: translateZ(60px);
+    -webkit-backface-visibility: hidden;
+  }
+  .cubespinner .face2 {
+  	background-image: url('mica2.jpg');
+    -webkit-transform: rotateY(90deg) translateZ(60px);
+    -moz-transform: rotateY(90deg) translateZ(60px);
+    -ms-transform: rotateY(90deg) translateZ(60px);
+    transform: rotateY(90deg) translateZ(60px);
+    -webkit-backface-visibility: hidden;
+  }
+  .cubespinner .face3 {
+  	background-image: url('mica3.jpg');
+    -webkit-transform: rotateY(90deg) rotateX(90deg) translateZ(60px);
+    -moz-transform: rotateY(90deg) rotateX(90deg) translateZ(60px);
+    -ms-transform: rotateY(90deg) rotateX(90deg) translateZ(60px);
+    transform: rotateY(90deg) rotateX(90deg) translateZ(60px);
+    -webkit-backface-visibility: hidden;
+  }
+  .cubespinner .face4 {
+  	background-image: url('mica4.jpg');
+    -webkit-transform: rotateY(180deg) rotateZ(90deg) translateZ(60px);
+    -moz-transform: rotateY(180deg) rotateZ(90deg) translateZ(60px);
+    -ms-transform: rotateY(180deg) rotateZ(90deg) translateZ(60px);
+    transform: rotateY(180deg) rotateZ(90deg) translateZ(60px);
+    -webkit-backface-visibility: hidden;
+  }
+  .cubespinner .face5 {
+  	background-image: url('mica5.jpg');
+    -webkit-transform: rotateY(-90deg) rotateZ(90deg) translateZ(60px);
+    -moz-transform: rotateY(-90deg) rotateZ(90deg) translateZ(60px);
+    -ms-transform: rotateY(-90deg) rotateZ(90deg) translateZ(60px);
+    transform: rotateY(-90deg) rotateZ(90deg) translateZ(60px);
+    -webkit-backface-visibility: hidden;
+  }
+  .cubespinner .face6 {
+  	background-image: url('mica6.jpg');
+    -webkit-transform: rotateX(-90deg) translateZ(60px);
+    -moz-transform: rotateX(-90deg) translateZ(60px);
+    -ms-transform: rotateX(-90deg) translateZ(60px);
+    transform: rotateX(-90deg) translateZ(60px);
+    -webkit-backface-visibility: hidden;
+  }
